@@ -11,10 +11,8 @@ import sqlite3
 import click
 import json
 
-truth_data_path = 'jig/truth.db'
 
-
-def step(runid, topic_id, results):
+def step(runid, topic_id, results, truth_data_path='jig/truth.db'):
     if not os.path.exists(truth_data_path):
         return {'error': 'Please run config.sh first'}
 
